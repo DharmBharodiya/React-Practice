@@ -1,0 +1,25 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Montserrat';
+}
+#appContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #FBFEF9;
+    flex-wrap: wrap;
+}
+
+h1{
+    font-size: 1.8rem;
+    font-style: italic;
+}
+
+#innerAppContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

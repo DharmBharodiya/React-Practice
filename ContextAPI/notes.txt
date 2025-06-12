@@ -1,0 +1,92 @@
+contect api basically helps in putting states or functions into the center at a common place such that any component that is meant to, can get the information from there
+it helps in avoiding something called as prop drilling, which is when you pass data through multiple layers of components, even if some of them don't need it. 
+so context api makes your code cleaner and easier to manage
+
+
+how does it work?
+- creating the context
+- providig the context
+- consuming the context
+
+1. Creating the context
+to share data, first we need to create context
+we use React.createContext() to create a context, this gives you a special object that will hold your shared data
+
+const myContext = createContext();
+
+here, myContext is the context object. it doesnt hold any data yet, though we can give it a default value
+ex. const myContext = createContext("default value")
+
+2. Providing the context
+now that we have context, we need to fill it or provide it with the context and place it at such place such that components can access it
+this is done using provider
+
+provider is a special component that comes with the context object(here myContext)
+it wraps around the parts of your app that needs access to the shared data
+
+ex.
+function App(){
+    const user = {name: "Alice", age:25};
+
+    return (
+        <MyContext.provider value={user}>
+            <ChildComponent />
+        </MyContext.provider>
+    )
+}
+
+, here the value prop is the actual data, any component (here child component) inside the provider can access the shared data
+
+3. consuming the context
+any component inside the provider can grab the data, there are a few way to consume or use the data, 
+
+ 1. using the useContext hook
+ - it is the easiest way to grab data from the context in a functional componenet
+ 
+ const myContext = createContext()
+ function App(){
+    const user = {name: "Alice", age:25};
+
+    return (
+        <MyContext.provider value={user}>
+            <ChildComponent />
+        </MyContext.provider>
+    )
+}
+
+function ChildComponent(){
+
+    const user = useContext(myContext);
+
+    return (
+        <p>Hello, {user.name}</h1>
+    )
+}
+
+here useContext(myContext) gives us the value that was passed to the MyContext.provider 
+
+ 2. using the consumer component
+
+ import React from 'react';
+
+const MyContext = React.createContext();
+
+function App() {
+  const user = { name: "Alice", age: 25 };
+
+  return (
+    <MyContext.Provider value={user}>
+      <ChildComponent />
+    </MyContext.Provider>
+  );
+}
+
+function ChildComponent() {
+  return (
+    <MyContext.Consumer>
+      {(user) => (
+        <p>Hello, {user.name}! You are {user.age} years old.</p>
+      )}
+    </MyContext.Consumer>
+  );
+}

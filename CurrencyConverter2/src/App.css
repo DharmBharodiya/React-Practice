@@ -1,0 +1,83 @@
+#fromInputBox{
+    border: none;
+    background: transparent;
+    border: 3px solid lightblue;
+    padding: 0.9 1.2rem;
+    color: white;
+    font-size: 1.8rem;
+    border-radius: 10px;
+    outline: none;
+}
+
+#fromInputBox:active{
+    border: 3px solid lightcoral;
+}
+
+#fromInputBox:focus{
+    border: 3px solid lightcoral;
+}
+
+#toInputBox{
+    border: none;
+    background: transparent;
+    padding: 0.9 1.2rem;
+    border: 3px solid lightblue;
+    color: white;
+    font-size: 1.8rem;
+    border-radius: 10px;
+}
+
+#main-container{
+    width: 100vw;
+    height: 100vh;
+    /* background: url("https://images.pexels.com/photos/169677/pexels-photo-169677.jpeg?auto=compress&cs=tinysrgb&w=1500"); */
+    background: #4A6D7C;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#form-container{
+    width: auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#swap-container{
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#submitBtnContainer{
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    margin-top: 1rem;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    background-color: #3A405A;
+    color: white;
+    font-weight: bold;
+    padding: 0.8rem 1.8rem;
+    border-radius: 10px;
+}
+
