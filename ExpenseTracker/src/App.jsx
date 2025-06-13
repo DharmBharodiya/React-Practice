@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import AddTransaction from './components/AddTransaction'
-import Transaction from './components/Transaction';
 import TransactionList from './components/TransactionList';
 import { useEffect } from 'react';
 import IncomeExpenseChart from './components/IncomeExpenseChart';
