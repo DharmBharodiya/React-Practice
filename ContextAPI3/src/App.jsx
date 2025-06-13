@@ -3,6 +3,9 @@ import { ThemeContext, ThemeProvider } from './contexts/ThemeContext'
 import Header from './components/Header'
 import ThemeToggle from './components/ThemeToggle'
 import './styles.css';
+import LanguageHeader from './components/LanguageHeader';
+import LanguageSelector from './components/LanguageSelector';
+import { LanguageProvider } from './contexts/LanguageContext';
 
 function AppContent() {
   const {themeType} = useContext(ThemeContext)
@@ -11,6 +14,8 @@ function AppContent() {
     <div className={`app ${themeType}`}>
       <Header/>
       <ThemeToggle/>
+      <LanguageHeader/>
+      <LanguageSelector />
     </div>
   )
 }
@@ -18,7 +23,9 @@ function AppContent() {
 function App() {
   return (
     <ThemeProvider>
-      <AppContent />
+      <LanguageProvider>
+        <AppContent />
+      </LanguageProvider>
     </ThemeProvider>
   )
 }
