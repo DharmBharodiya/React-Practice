@@ -1,0 +1,26 @@
+/* src/styles.css */
+.app {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  header {
+    margin-bottom: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  /* Apply theme styles */
+  .light {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  .dark {
+    background-color: #333333;
+    color: #ffffff;
+  }
