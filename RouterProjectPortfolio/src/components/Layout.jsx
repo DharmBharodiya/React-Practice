@@ -4,10 +4,9 @@ import { Outlet, NavLink } from 'react-router-dom'
 function Layout({isLoggedIn, setIsLoggedIn}) {
     
     return (
-
-        <div>
-            <nav>
-                <ul>
+        <div className="min-h-screen bg-gray-100">
+            <nav className="bg-gray-800 p-4">
+                <ul className="flex space-x-6 justify-center">
                     <li>
                         <NavLink
                          to="/"
@@ -39,20 +38,18 @@ function Layout({isLoggedIn, setIsLoggedIn}) {
                     {isLoggedIn && (
                         <li>
                             <button 
-                            onClick={() => setIsLoggedIn(false)}>
+                            onClick={() => setIsLoggedIn(false)}
+                            className="text-white hover:underline">
                                 LogOut
                             </button>
                         </li>
                     )}   
-                    
                 </ul>
             </nav>
-            <div>
+            <div className="container mx-auto p-4">
                 <Outlet />
             </div>
-            
         </div>
-
   )
 }
 
