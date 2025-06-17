@@ -1,11 +1,16 @@
 import React, {useState} from 'react';
+import './InvoicePage.css';
 
 import { useAuth } from '../context/AuthContext';
+import BusinessInfo from '../components/BusinessInfo';
+import ClientInfo from '../components/ClientInfo';
+import Items from '../components/Items';
+import Summary from '../components/Summary';
 
 const InvoicePage = () => {
 
     const { user, logout} = useAuth();
-    const [date, setDate] = useState(new Date().toISOString.split('T')[0]);
+    const [date, setDate] = useState(new Date().toISOString().split('T')[0]);
 
     const [businessInfo, setBusinessInfo] = useState({
         name: '',
@@ -21,7 +26,7 @@ const InvoicePage = () => {
     });
 
     const [items, setItems] = useState([
-        {description: ', quantity: 1, rate: 0'}
+        {description: '', quantity: 1, rate: 0}
     ])
 
     const [tax, setTax] = useState(0)
@@ -57,6 +62,11 @@ const InvoicePage = () => {
                 </div>
             </header>
 
+            <BusinessInfo data={businessInfo} setData={setBusinessInfo}/>
+            <ClientInfo data={clientInfo} setData={setClientInfo}/>
+            <Items items={items} setItems={setItems}/>
+            <Summary items={items} tax={tax} setTax={setTax} discount={discount} setDiscount={setDiscount}/>
+
             <div className='invoice-actions'>
                 <button onClick={handlePrint}>Print</button>
                 <button onClick={handleReset}>Reset</button>
@@ -65,3 +75,5 @@ const InvoicePage = () => {
     )
 
 }
+
+export default InvoicePage;

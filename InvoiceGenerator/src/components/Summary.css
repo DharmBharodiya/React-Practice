@@ -1,0 +1,29 @@
+.summary-section {
+    background-color: #f9f9f9;
+  }
+  
+  .summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  
+  .summary-row label {
+    font-weight: bold;
+    width: 100px;
+  }
+  
+  .summary-row input {
+    width: 150px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .summary-row.total span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #111;
+  }
+  

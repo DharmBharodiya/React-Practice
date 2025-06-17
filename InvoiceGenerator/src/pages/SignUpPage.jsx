@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import {useNavigate, Link} from 'react-router-dom'
 import { useAuth } from '../context/AuthContext';
+import './SignUpPage.css';
 
 const SignUpPage = () => {
     
@@ -27,7 +28,7 @@ const SignUpPage = () => {
 
     return(
         <div className='signup-container'>
-            <form onSubmit={handleSignup}>
+            <form onSubmit={handleSignUp}>
                 <label>Email:</label>
                 <input
                 type='email'

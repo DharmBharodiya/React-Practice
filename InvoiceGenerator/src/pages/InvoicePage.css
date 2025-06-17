@@ -1,0 +1,54 @@
+.invoice-page {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    font-family: sans-serif;
+  }
+  
+  .invoice-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .invoice-header input[type="date"] {
+    padding: 6px;
+    font-size: 14px;
+  }
+  
+  .user-info {
+    text-align: right;
+  }
+  
+  .user-info button {
+    margin-left: 10px;
+    background-color: #ef4444;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .invoice-actions {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .invoice-actions button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .invoice-actions button:hover {
+    background-color: #2563eb;
+  }
+  
