@@ -4,6 +4,7 @@ import TransactionList from './components/TransactionList';
 import { useEffect } from 'react';
 import IncomeExpenseChart from './components/IncomeExpenseChart';
 import "./App.css"
+import LoginPage from './pages/LoginPage';
 
 function App() {
 
@@ -38,6 +39,7 @@ function App() {
 
   return (
     <>
+    <LoginPage />
     <div id='appContainer'>
     <h1>Expense Tracker</h1>
       <div id='innerAppContainer'>
