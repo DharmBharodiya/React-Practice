@@ -1,4 +1,5 @@
 import React from 'react'
+import './BusinessInfo.css'
 
 function BusinessInfo({data, setData}) {
 

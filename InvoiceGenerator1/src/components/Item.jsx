@@ -1,9 +1,10 @@
 import React from "react";
+import "./Item.css"
 
 function Item({handleChange, item, deleteItem}){
   
     return(
-        <div>
+        <div className="item-container">
             <input
             type="text"
             placeholder="description"

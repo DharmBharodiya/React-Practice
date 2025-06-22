@@ -1,0 +1,18 @@
+.items {
+    display: flex;
+    flex-direction: column;
+}
+
+.items button{
+    border: none;
+    background-color: black;
+    color: white;
+    margin: 8px 5px;
+    padding: 8px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.items button:hover{
+    background: green;
+}

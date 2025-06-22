@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {useAuth} from "../context/UserContext"
-import { useNavigate } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
+import "./signup.css"
 function SignupPage(){
 
     const {signup} = useAuth();
@@ -12,8 +12,10 @@ function SignupPage(){
     const navigate = useNavigate()
 
     const handleSignup = (e) => {
+        let validate;
         e.preventDefault()
-        const validate = signup(email, password)
+        if(email != "" && password != "") {
+            validate = signup(email, password)}
         if(validate){
             setSuccess("Account registered. Login Now.");
             setTimeout(() => {
@@ -25,13 +27,15 @@ function SignupPage(){
     }
 
     return(
-        <div>
+        <div className="signup-container">
+            <h2>Sign Up</h2>
             <form onSubmit={handleSignup}>
                 <input
                 type="email"
                 placeholder="E-mail"
                 onChange={(e) => setEmail(e.target.value)}
                 value={email}
+                style={{marginBottom: "15px"}}
                 />
                 <input
                 type="password"
@@ -41,6 +45,7 @@ function SignupPage(){
                 />
                 {error ? <p className="error">{error}</p> : <p className="success">{success}</p>}
                 <button type="submit">Sign up</button>
+                <p>Already registered? <Link to="/login">Log In.</Link></p>
             </form>
         </div>
     )

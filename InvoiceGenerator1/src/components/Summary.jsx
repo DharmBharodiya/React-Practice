@@ -1,4 +1,5 @@
 import React from 'react'
+import "./Summary.css"
 
 function Summary({tax, setTax, setDiscount, discount, items}) {
     console.log('Items received:', items);
@@ -30,7 +31,7 @@ function Summary({tax, setTax, setDiscount, discount, items}) {
 
   return (
     <div className="section summary">
-        <div className="calculation-side">
+        <div className="calculation-side side">
             <div className="summary-row">
                 <label>Subtotal:</label>
                 <span>₹ {subtotal.toFixed(2)}</span>
@@ -56,9 +57,11 @@ function Summary({tax, setTax, setDiscount, discount, items}) {
                 />
             </div>
         </div>
-        <div className="total-side">
-            <label>Total</label>
-            <h2>₹{calculateTotal().toFixed(2)}</h2>
+        <div className="total-side side">
+            <div className="inside-side">
+                <label>Total</label>
+                <h2>₹{calculateTotal().toFixed(2)}</h2>
+            </div>
         </div>
     </div>
   )

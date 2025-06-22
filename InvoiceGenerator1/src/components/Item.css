@@ -1,0 +1,24 @@
+.item-container{
+    display: flex;
+    align-items: center;
+}
+.item-container input{
+    padding: 8px 10px;
+    margin: auto 5px;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+}
+
+.item-container span button{
+    outline: none;
+    border: none;
+    color: white;
+    background-color: tomato;
+    padding: 6px 10px;
+    border-radius: 5px;
+}
+
+.item-container p {
+    font-size: 14px;
+    margin: auto 8px;
+}

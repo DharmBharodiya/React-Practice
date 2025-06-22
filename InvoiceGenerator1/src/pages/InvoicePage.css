@@ -1,10 +1,92 @@
-/* body{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #fff;
-    min-height: 80vh;
+.invoice-container{
+    /* margin: 0px 100px auto; */
+    /* background-color: seagreen; */
+    font-family: sans-serif;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+header{
     display: flex;
+    font-size: 14px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+header h3{
+    margin-left: 30px;
+}
+
+.heading-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.user-info{
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    /* background: purple; */
     justify-content: center;
-    align-items: center;
-} */
+    align-items: flex-end;
+}
+
+.user-info button{
+    margin-left: 10px;
+    background-color: black;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    max-width: 100px;
+}
+
+.action-buttons{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.action-buttons button{
+    outline: none;
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+button:hover{
+    background-color: tomato;
+    cursor: pointer;
+}
+
+@media print {
+    .action-buttons, button {
+        display: none;
+    }
+
+    .invoice-container{
+        transform: scale(0.7);
+        margin: 0;
+    }
+
+    .invoice-container {
+        page-break-inside: avoid;
+        height: auto;
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+    .invoice-container > * {
+        page-break-inside: avoid;
+    }
+
+    header, .heading-container, .user-info, .summary-section {
+        page-break-inside: avoid;
+    }
+}

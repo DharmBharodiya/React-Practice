@@ -47,3 +47,8 @@
     text-decoration: none;
     /* color: black; */
   }
+
+  button:hover{
+    background: tomato;
+    color: black;
+  }
