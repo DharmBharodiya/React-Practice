@@ -1,0 +1,2 @@
+# MultiStep Form
+This is a new kind of form wherein all the fields of the form to be filled up is not shown upright, rather as and when user gradually enters and shares detail, the next fields come in place.
