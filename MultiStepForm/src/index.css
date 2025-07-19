@@ -1,1 +1,51 @@
-@import "tailwindcss"
+@import "tailwindcss";
+
+.shimmer-text {
+  background: linear-gradient(
+    90deg,
+    #000 0%,
+    #000 25%,
+    #fff 50%,
+    #000 75%,
+    #000 100%
+  );
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: shimmer-move-reverse 3s infinite linear;
+}
+
+.shimmer-text2 {
+  background: linear-gradient(
+    90deg,
+    #000 0%,
+    #000 25%,
+    red 50%,
+    #000 75%,
+    #000 100%
+  );
+  background-size: 200% 100%;
+  /* background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent; */
+  animation: shimmer-move .9s infinite linear;
+}
+
+@keyframes shimmer-move{
+    0%{
+        background-position: 0% 0%;
+    }
+    100%{
+        background-position: 200% 0%;
+    }
+}
+
+@keyframes shimmer-move-reverse{
+    0%{
+        background-position: 200% 0%;
+    }
+    100%{
+        background-position: 0% 0%;
+    }
+}
